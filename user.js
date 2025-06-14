@@ -33,14 +33,14 @@ user_pref("userChrome.tab.supernova_like_contextline",   true);
 
 // == Theme Compatibility Settings =============================================
 user_pref("userChrome.compatibility.accent_color",         false); // Firefox v103 Below
-user_pref("userChrome.compatibility.covered_header_image", false);
-user_pref("userChrome.compatibility.panel_cutoff",         false);
-user_pref("userChrome.compatibility.navbar_top_border",    false);
+user_pref("userChrome.compatibility.covered_header_image", true);
+user_pref("userChrome.compatibility.panel_cutoff",         true);
+user_pref("userChrome.compatibility.navbar_top_border",    true);
 user_pref("userChrome.compatibility.dynamic_separator",    false); // Need dynamic_separator
 
 // user_pref("userChrome.compatibility.os.linux_non_native_titlebar_button", true);
 user_pref("userChrome.compatibility.os.windows_maximized", false);
-user_pref("userChrome.compatibility.os.win11",             true);
+user_pref("userChrome.compatibility.os.win11",             false);
 
 // == Theme Custom Settings ====================================================
 // -- User Chrome --------------------------------------------------------------
@@ -49,12 +49,12 @@ user_pref("userChrome.theme.private",                       true);
 // user_pref("userChrome.theme.monospace",                     true);
 // user_pref("userChrome.theme.transparent.frame",             true);
 user_pref("userChrome.theme.transparent.menu",              true);
-user_pref("userChrome.theme.transparent.panel",             true);
+user_pref("userChrome.theme.transparent.panel",             false);
 // user_pref("userChrome.theme.non_native_menu",               true); // only for linux
 
 // user_pref("userChrome.decoration.disable_panel_animate",    true);
 // user_pref("userChrome.decoration.disable_sidebar_animate",  true);
-user_pref("userChrome.decoration.panel_button_separator",   true);
+user_pref("userChrome.decoration.panel_button_separator",   false);
 user_pref("userChrome.decoration.panel_arrow",              true);
 
 // user_pref("userChrome.autohide.tab",                        true);
@@ -62,7 +62,7 @@ user_pref("userChrome.decoration.panel_arrow",              true);
 // user_pref("userChrome.autohide.tab.blur",                   true);
 // user_pref("userChrome.autohide.tabbar",                     true);
 // user_pref("userChrome.autohide.navbar",                     true);
-user_pref("userChrome.autohide.bookmarkbar",                true);
+user_pref("userChrome.autohide.bookmarkbar",                false);
 // user_pref("userChrome.autohide.sidebar",                    true);
 // user_pref("userChrome.autohide.fill_urlbar",                true);
 user_pref("userChrome.autohide.back_button",                true);
@@ -98,7 +98,7 @@ user_pref("userChrome.combined.nav_button.home_button",     true);
 // user_pref("userChrome.combined.urlbar.home_button",         true);
 // user_pref("userChrome.combined.urlbar.reload_button",       true);
 user_pref("userChrome.combined.sub_button.none_background", false);
-user_pref("userChrome.combined.sub_button.as_normal",       true);
+user_pref("userChrome.combined.sub_button.as_normal",       false);
 
 // user_pref("userChrome.rounding.square_button",              true);
 // user_pref("userChrome.rounding.square_dialog",              true);
@@ -170,15 +170,15 @@ user_pref("userChrome.tab.selected_bold",                   true);
 
 user_pref("userChrome.findbar.floating_on_top",             true);
 
-user_pref("userChrome.panel.remove_strip",                  true);
+user_pref("userChrome.panel.remove_strip",                  false);
 user_pref("userChrome.panel.full_width_separator",          true);
 user_pref("userChrome.panel.full_width_padding",            true);
 
 // user_pref("userChrome.sidebar.overlap",                     true);
 
 // user_pref("userChrome.icon.disabled",                       true);
-user_pref("userChrome.icon.account_image_to_right",         true);
-user_pref("userChrome.icon.account_label_to_right",         true);
+user_pref("userChrome.icon.account_image_to_right",         false);
+user_pref("userChrome.icon.account_label_to_right",         false);
 user_pref("userChrome.icon.menu.full",                      true);
 // user_pref("userChrome.icon.global_menu.mac",                true);
 
@@ -201,7 +201,7 @@ user_pref("userChrome.compatibility.os",          true);
 user_pref("userChrome.theme.built_in_contrast",   true);
 user_pref("userChrome.theme.system_default",      true);
 user_pref("userChrome.theme.proton_color",        true);
-user_pref("userChrome.theme.proton_chrome",       false); // Need proton_color
+user_pref("userChrome.theme.proton_chrome",       true); // Need proton_color
 user_pref("userChrome.theme.fully_color",         true); // Need proton_color
 user_pref("userChrome.theme.fully_dark",          true); // Need proton_color
 
@@ -281,8 +281,6 @@ user_pref("userContent.page.proton",           true); // Need proton_color
  * SECTION: FASTFOX                                                         *
 ****************************************************************************/
 /** GENERAL ***/
-user_pref("nglayout.initialpaint.delay", 0);
-user_pref("nglayout.initialpaint.delay_in_oopif", 0);
 user_pref("content.notify.interval", 100000);
 
 /** GFX ***/
@@ -311,22 +309,19 @@ user_pref("network.ssl_tokens_cache_capacity", 10240);
 user_pref("network.dns.max_high_priority_threads", 50)
 
 /** SPECULATIVE LOADING ***/
-user_pref("network.dns.disablePrefetch", false);
+user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
 user_pref("network.predictor.enable-hover-on-ssl", true);
-user_pref("network.prefetch-next", true);
-user_pref("network.predictor.enabled", true);
-user_pref("security.remote_settings.crlite_filters.enabled", true);
-user_pref("network.http.speculative-parallel-limit", 10);
-user_pref("network.https.speculative-parallel-limit", 10);
+user_pref("network.prefetch-next", false);
+user_pref("network.predictor.enabled", false);
+user_pref("network.http.speculative-parallel-limit", 0);
+user_pref("network.https.speculative-parallel-limit", 0);
 
 /** EXPERIMENTAL ***/
 user_pref("layout.css.grid-template-masonry-value.enabled", true);
 user_pref("dom.enable_web_task_scheduling", true);
 user_pref("dom.security.sanitizer.enabled", true);
 user_pref("layout.css.has-selector.enabled", true);
-user_pref("accessibility.force_disabled", 1);
-user_pref("browser.tabs.loadBookmarksInTabs", true);
 
 /****************************************************************************
  * SECTION: SECUREFOX                                                       *
@@ -363,27 +358,11 @@ user_pref("browser.sessionstore.resume_from_crash", false);
 /** SEARCH / URL BAR ***/
 user_pref("browser.urlbar.trimHttps", false);
 user_pref("browser.urlbar.trimURLs", false);
-user_pref("browser.urlbar.update2.engineAlias", true);
-user_pref("browser.urlbar.update2.engineAlias.featureGate", true);
-user_pref("browser.urlbar.update2.engineAliasRefresh.featureGate", true);
-user_pref("browser.urlbar.untrimOnUserInteraction.featureGate", true);
-user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 user_pref("browser.urlbar.update2.engineAliasRefresh", true);
-user_pref("browser.search.suggest.enabled", true);
-user_pref("browser.urlbar.suggest.searches", true);
-user_pref("browser.urlbar.suggest.history", false);
-user_pref("browser.urlbar.suggest.openpage", true);
-user_pref("browser.urlbar.suggest.bookmark", true);
-user_pref("browser.urlbar.suggest.bookmarks", true);
-user_pref("browser.urlbar.suggest.calculator", true);
-user_pref("browser.urlbar.suggest.engines", true);
-user_pref("browser.urlbar.suggest.quicksuggest", true);
-user_pref("browser.urlbar.suggest.openpage", false);
 user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
 user_pref("browser.urlbar.quicksuggest.enabled", true);
 user_pref("browser.urlbar.quicksuggest.sponsored", false);
-user_pref("browser.urlbar.quicksuggest.sponsoredTopSites", false);
 user_pref("browser.urlbar.groupLabels.enabled", true);
 user_pref("browser.formfill.enable", false);
 user_pref("network.IDN_show_punycode", true);
@@ -393,8 +372,6 @@ user_pref("dom.security.https_first", true);
 
 /** PASSWORDS ***/
 user_pref("identity.fxaccounts.enabled", true);
-user_pref("identity.fxaccounts.autoconnect", false);
-user_pref("identity.fxaccounts.remote.pairing.enabled", false);
 user_pref("browser.tabs.firefox-view", true);
 user_pref("signon.formlessCapture.enabled", false);
 user_pref("signon.rememberSignons", false);
@@ -541,17 +518,12 @@ user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("extensions.pocket.enabled", false);
 
 /** DOWNLOADS ***/
-user_pref("browser.download.manager.addToRecentDocs", false);
-user_pref("browser.download.manager.alertOnEXEOpen", false);
-user_pref("browser.download.manager.focusWhenStarting", false);
-user_pref("browser.download.alwaysOpenPanel", false);
 user_pref("browser.download.useDownloadDir", false);
 
 /** PDF ***/
 user_pref("browser.download.open_pdf_attachments_inline", true);
 user_pref("pdfjs.disabled", false);
 user_pref("pdfjs.enableScripting", false);
-user_pref("pdfjs.enableScripting.featureGate", true);
 
 /** TAB BEHAVIOR ***/
 user_pref("browser.bookmarks.openInTabClosesMenu", false);
