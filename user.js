@@ -32,15 +32,14 @@ user_pref("userChrome.rounding.square_tab",           false);
 user_pref("userChrome.tab.supernova_like_contextline",   true);
 
 // == Theme Compatibility Settings =============================================
-user_pref("userChrome.compatibility.accent_color",         false); // Firefox v103 Below
+// user_pref("userChrome.compatibility.accent_color",         true); // Firefox v103 Below
 user_pref("userChrome.compatibility.covered_header_image", true);
 user_pref("userChrome.compatibility.panel_cutoff",         true);
 user_pref("userChrome.compatibility.navbar_top_border",    true);
-user_pref("userChrome.compatibility.dynamic_separator",    false); // Need dynamic_separator
+// user_pref("userChrome.compatibility.dynamic_separator",    true); // Need dynamic_separator
 
-// user_pref("userChrome.compatibility.os.linux_non_native_titlebar_button", true);
-user_pref("userChrome.compatibility.os.windows_maximized", false);
-user_pref("userChrome.compatibility.os.win11",             false);
+// user_pref("userChrome.compatibility.os.windows_maximized", true);
+user_pref("userChrome.compatibility.os.win11",             true);
 
 // == Theme Custom Settings ====================================================
 // -- User Chrome --------------------------------------------------------------
@@ -49,12 +48,12 @@ user_pref("userChrome.theme.private",                       true);
 // user_pref("userChrome.theme.monospace",                     true);
 // user_pref("userChrome.theme.transparent.frame",             true);
 user_pref("userChrome.theme.transparent.menu",              true);
-user_pref("userChrome.theme.transparent.panel",             false);
+// user_pref("userChrome.theme.transparent.panel",             true);
 // user_pref("userChrome.theme.non_native_menu",               true); // only for linux
 
 // user_pref("userChrome.decoration.disable_panel_animate",    true);
 // user_pref("userChrome.decoration.disable_sidebar_animate",  true);
-user_pref("userChrome.decoration.panel_button_separator",   false);
+user_pref("userChrome.decoration.panel_button_separator",   true);
 user_pref("userChrome.decoration.panel_arrow",              true);
 
 // user_pref("userChrome.autohide.tab",                        true);
@@ -62,7 +61,7 @@ user_pref("userChrome.decoration.panel_arrow",              true);
 // user_pref("userChrome.autohide.tab.blur",                   true);
 // user_pref("userChrome.autohide.tabbar",                     true);
 // user_pref("userChrome.autohide.navbar",                     true);
-user_pref("userChrome.autohide.bookmarkbar",                false);
+user_pref("userChrome.autohide.bookmarkbar",                true);
 // user_pref("userChrome.autohide.sidebar",                    true);
 // user_pref("userChrome.autohide.fill_urlbar",                true);
 user_pref("userChrome.autohide.back_button",                true);
@@ -97,8 +96,8 @@ user_pref("userChrome.combined.nav_button.home_button",     true);
 // user_pref("userChrome.combined.urlbar.nav_button",          true);
 // user_pref("userChrome.combined.urlbar.home_button",         true);
 // user_pref("userChrome.combined.urlbar.reload_button",       true);
-user_pref("userChrome.combined.sub_button.none_background", false);
-user_pref("userChrome.combined.sub_button.as_normal",       false);
+// user_pref("userChrome.combined.sub_button.none_background", true);
+// user_pref("userChrome.combined.sub_button.as_normal",       true);
 
 // user_pref("userChrome.rounding.square_button",              true);
 // user_pref("userChrome.rounding.square_dialog",              true);
@@ -129,7 +128,7 @@ user_pref("userChrome.urlbar.iconbox_with_separator",       true);
 // user_pref("userChrome.urlView.as_commandbar",               true);
 user_pref("userChrome.urlView.full_width_padding",          true);
 user_pref("userChrome.urlView.always_show_page_actions",    true);
-// user_pref("userChrome.urlView.move_icon_to_left",           true);
+user_pref("userChrome.urlView.move_icon_to_left",           true);
 user_pref("userChrome.urlView.go_button_when_typing",       true);
 user_pref("userChrome.urlView.focus_item_border",           true);
 
@@ -170,22 +169,22 @@ user_pref("userChrome.tab.selected_bold",                   true);
 
 user_pref("userChrome.findbar.floating_on_top",             true);
 
-user_pref("userChrome.panel.remove_strip",                  false);
+user_pref("userChrome.panel.remove_strip",                  true);
 user_pref("userChrome.panel.full_width_separator",          true);
 user_pref("userChrome.panel.full_width_padding",            true);
 
 // user_pref("userChrome.sidebar.overlap",                     true);
 
 // user_pref("userChrome.icon.disabled",                       true);
-user_pref("userChrome.icon.account_image_to_right",         false);
-user_pref("userChrome.icon.account_label_to_right",         false);
+user_pref("userChrome.icon.account_image_to_right",         true);
+user_pref("userChrome.icon.account_label_to_right",         true);
 user_pref("userChrome.icon.menu.full",                      true);
-// user_pref("userChrome.icon.global_menu.mac",                true);
+user_pref("userChrome.icon.global_menu.mac",                true);
 
 // -- User Content -------------------------------------------------------------
 user_pref("userContent.player.ui.twoline",                  true);
 
-// user_pref("userContent.newTab.hidden_logo",                 true);
+user_pref("userContent.newTab.hidden_logo",                 true);
 // user_pref("userContent.newTab.background_image",            true); // Need wallpaper image to `userContent.css`. :root { --uc-newTab-wallpaper: url("../icons/background_image.png"); }
 
 // user_pref("userContent.page.proton_color.dark_blue_accent", true);
@@ -263,33 +262,47 @@ user_pref("userContent.page.proton_color",     true);
 user_pref("userContent.page.dark_mode",        true); // Need proton_color
 user_pref("userContent.page.proton",           true); // Need proton_color
 
-// This is my custom Firefox user.js that supports the latest version of the browser.
-// It contains various user preferences to customize the browser's behavior.
-// The file is divided into sections, each with a specific purpose.
-// The sections include:
-// - GENERAL: General settings for the browser. [oops not there]
-// - FASTFOX: Performance optimizations.
-// - SECUREFOX: Security and privacy settings.
-// - PESKYFOX: Settings to disable unwanted features.
-// - SMOOTHFOX: Smooth scrolling settings.
-// - MY OVERRIDES: Personal overrides for specific settings.
-// - START: Useful tab options is the start of the custom settings.
-// The file is intended to be used with Firefox and can be modified to suit individual preferences.
-// It is heavily based on Betterfox, a popular user.js configuration for Firefox.
-
 /****************************************************************************
  * SECTION: FASTFOX                                                         *
 ****************************************************************************/
 /** GENERAL ***/
+user_pref("nglayout.initialpaint.delay", 0);
+user_pref("nglayout.initialpaint.delay_in_oopif", 0);
 user_pref("content.notify.interval", 100000);
+user_pref("content.notify.ontimer", true);
+user_pref("content.switch.threshold", 100000);
 
 /** GFX ***/
-user_pref("gfx.canvas.accelerated.cache-size", 512);
+user_pref("gfx.canvas.accelerated", true);
+user_pref("gfx.webrender.all", true); // Enable WebRender
+user_pref("gfx.webrender.enabled", true);
+user_pref("gfx.webrender.compositor", true);
+user_pref("gfx.webrender.dl-decode.enabled", true);
+user_pref("gfx.webrender.layers-free", true);
+user_pref("gfx.webrender.blob-images", true);
+user_pref("gfx.webrender.dl-tiles.enabled", true);
 user_pref("gfx.canvas.accelerated.cache-items", 8192);
+user_pref("gfx.canvas.accelerated.cache-size", 512);
+user_pref("gfx.canvas.accelerated.enabled", true);
+user_pref("gfx.canvas.accelerated.async.enabled", true);
+user_pref("gfx.canvas.accelerated.async.use-angle", true);
 user_pref("gfx.content.skia-font-cache-size", 20);
+user_pref("gfx.content.azure.accelerated", true);
+user_pref("gfx.content.azure.backends", "skia");
+user_pref("gfx.content.azure.backends.skia.use-angle", true);
 
 /** DISK CACHE ***/
-user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.enable", true);   // Enable disk cache
+user_pref("browser.cache.disk.capacity", 1048576); // Set disk cache size to 1GB
+user_pref("browser.cache.disk.smart_size.enabled", true); // Enable smart size for disk cache
+user_pref("browser.cache.disk.smart_size.first_run", false); // Disable first run for smart
+user_pref("browser.cache.jsbc_compression_level", 3);
+
+/** MEMORY CACHE ***/
+user_pref("browser.sessionhistory.max_total_viewers", 4);
+user_pref("browser.cache.memory.enable", true); // Enable memory cache
+user_pref("browser.cache.memory.capacity", 512000); // Set memory cache size to 500MB
+user_pref("browser.cache.memory.max_entry_size", 51200); // Set max entry size
 
 /** MEDIA CACHE ***/
 user_pref("media.memory_cache_max_size", 65536);
@@ -300,26 +313,34 @@ user_pref("media.cache_resume_threshold", 3600);
 user_pref("image.mem.decode_bytes_at_a_time", 32768);
 
 /** NETWORK ***/
+user_pref("network.buffer.cache.size", 262144);
+user_pref("network.buffer.cache.count", 128);
 user_pref("network.http.max-connections", 1800);
 user_pref("network.http.max-persistent-connections-per-server", 10);
 user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5);
 user_pref("network.http.pacing.requests.enabled", false);
 user_pref("network.dnsCacheExpiration", 3600);
+user_pref("network.dns.max_high_priority_threads", 64);
 user_pref("network.ssl_tokens_cache_capacity", 10240);
-user_pref("network.dns.max_high_priority_threads", 50)
 
 /** SPECULATIVE LOADING ***/
+user_pref("network.http.speculative-parallel-limit", 0);
+user_pref("network.http.speculative-parallel-limit.varying-hosts", 0);
+user_pref("network.http.speculative-parallel-limit.same-host", 0);
 user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchOnConnection", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
-user_pref("network.predictor.enable-hover-on-ssl", true);
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
+user_pref("browser.places.speculativeConnect.enabled", false);
 user_pref("network.prefetch-next", false);
 user_pref("network.predictor.enabled", false);
-user_pref("network.http.speculative-parallel-limit", 0);
-user_pref("network.https.speculative-parallel-limit", 0);
+user_pref("network.predictor.enable-prefetch", false);
 
 /** EXPERIMENTAL ***/
 user_pref("layout.css.grid-template-masonry-value.enabled", true);
 user_pref("dom.enable_web_task_scheduling", true);
+user_pref("dom.enable_user_timing", true);
+user_pref("dom.enable_user_timing_v2", true);
 user_pref("dom.security.sanitizer.enabled", true);
 user_pref("layout.css.has-selector.enabled", true);
 
@@ -327,14 +348,17 @@ user_pref("layout.css.has-selector.enabled", true);
  * SECTION: SECUREFOX                                                       *
 ****************************************************************************/
 /** TRACKING PROTECTION ***/
+user_pref("privacy.partition.bloburl_per_partition_key", true);
+user_pref("privacy.partition.serviceWorkers.per_partition_key", true);
+user_pref("privacy.partition.network_state_per_partition_key", true);
+user_pref("network.cookie.sameSite.noneRequiresSecure", true);
+user_pref("browser.download.start_downloads_in_tmp_dir", true);
+user_pref("browser.helperApps.deleteTempFileOnExit", true);
 user_pref("privacy.partition.serviceWorkers", true);
-/** FINGERPRINTING ***/
-user_pref("privacy.resistFingerprinting", false);
-user_pref("privacy.resistFingerprinting.letterboxing", false);
-user_pref("privacy.resistFingerprinting.reduceTimerPrecision", false);
-/** COOKIES ***/ 
-user_pref("network.cookie.cookieBehavior", 5); // 5 = Block all third-party cookies
+user_pref("privacy.partition.network_state", true);
+user_pref("browser.uitour.enabled", false);
 user_pref("privacy.globalprivacycontrol.enabled", true);
+user_pref("privacy.globalprivacycontrol.functionality.enabled", true);
 
 /** OCSP & CERTS / HPKP ***/
 user_pref("security.OCSP.enabled", 0);
@@ -353,43 +377,57 @@ user_pref("browser.sessionstore.interval", 60000);
 
 /** SHUTDOWN & SANITIZING ***/
 user_pref("browser.privatebrowsing.resetPBM.enabled", true);
-user_pref("browser.sessionstore.resume_from_crash", false);
+user_pref("browser.sessionstore.resume_from_crash", true);
 
 /** SEARCH / URL BAR ***/
 user_pref("browser.urlbar.trimHttps", false);
 user_pref("browser.urlbar.trimURLs", false);
+user_pref("browser.urlbar.untrimOnUserInteraction.featureGate", true);
+user_pref("browser.search.separatePrivateDefault.ui.enabled", true);
 user_pref("browser.urlbar.update2.engineAliasRefresh", true);
-user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
-user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
+user_pref("browser.search.suggest.enabled", true);
 user_pref("browser.urlbar.quicksuggest.enabled", true);
-user_pref("browser.urlbar.quicksuggest.sponsored", false);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
 user_pref("browser.urlbar.groupLabels.enabled", true);
 user_pref("browser.formfill.enable", false);
+user_pref("security.insecure_connection_text.enabled", true);
+user_pref("security.insecure_connection_text.pbmode.enabled", true);
 user_pref("network.IDN_show_punycode", true);
 
-/** HTTPS-FIRST POLICY ***/
+/** HTTPS-ONLY MODE ***/
 user_pref("dom.security.https_first", true);
+user_pref("dom.security.https_first_schemeless", true);
 
 /** PASSWORDS ***/
-user_pref("identity.fxaccounts.enabled", true);
-user_pref("browser.tabs.firefox-view", true);
 user_pref("signon.formlessCapture.enabled", false);
 user_pref("signon.rememberSignons", false);
-user_pref("signon.autofillForms", false);
 user_pref("signon.privateBrowsingCapture.enabled", false);
 user_pref("network.auth.subresource-http-auth-allow", 1);
 user_pref("editor.truncate_user_pastes", false);
-
-/** MIXED CONTENT + CROSS-SITE ***/
-user_pref("security.mixed_content.block_display_content", true);
-user_pref("security.mixed_content.block_active_content", true);
-user_pref("security.mixed_content.upgrade_display_content", true);
-user_pref("pdfjs.enableScripting", false);
-user_pref("extensions.postDownloadThirdPartyPrompt", false);
+user_pref("accessibility.force_disabled", 1);
 
 /** ADDRESS + CREDIT CARD MANAGER ***/
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
+
+/** FINGERPRINTING ***/
+user_pref("privacy.resistFingerprinting", false);
+user_pref("privacy.resistFingerprinting.letterboxing", false);
+user_pref("privacy.resistFingerprinting.reduceTimerPrecision", true);
+user_pref("privacy.resistFingerprinting.reduceMotion", true);
+user_pref("privacy.resistFingerprinting.heuristics.enabled", false);
+user_pref("privacy.resistFingerprinting.heuristics.tcpFingerprinting", false);
+user_pref("privacy.resistFingerprinting.heuristics.tcpFingerprinting.enabled", false);
+
+/** MIXED CONTENT + CROSS-SITE ***/
+user_pref("network.auth.subresource-http-auth-allow", 1);
+user_pref("security.mixed_content.block_display_content", true);
+user_pref("security.mixed_content.upgrade_display_content", true);
+user_pref("security.mixed_content.upgrade_display_content.image", true);
+user_pref("pdfjs.enableScripting", false);
+user_pref("extensions.postDownloadThirdPartyPrompt", false);
+user_pref("browser.tabs.firefox-view", true);
 
 /** EXTENSIONS ***/
 user_pref("extensions.enabledScopes", 5);
@@ -403,8 +441,6 @@ user_pref("privacy.userContext.ui.enabled", true);
 /** WEBRTC ***/
 user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
 user_pref("media.peerconnection.ice.default_address_only", true);
-user_pref("media.peerconnection.ice.no_host", true);
-user_pref("media.peerconnection.ice.no_tcp", true);
 
 /** SAFE BROWSING ***/
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
@@ -414,17 +450,13 @@ user_pref("permissions.default.geo", 2);
 user_pref("geo.provider.network.url", "https://beacondb.net/v1/geolocate");
 user_pref("browser.search.update", false);
 user_pref("permissions.manager.defaultsUrl", "");
+user_pref("extensions.getAddons.cache.enabled", false);
 
 /** TELEMETRY ***/
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.enabled", false);
-user_pref("toolkit.telemetry.archive.enabled", false);
-user_pref("toolkit.telemetry.bhrPing.enabled", false);
-user_pref("toolkit.telemetry.newProfilePing.enabled", false);
-user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
-user_pref("toolkit.telemetry.updatePing.enabled", false);
 user_pref("toolkit.telemetry.server", "data:,");
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.newProfilePing.enabled", false);
@@ -437,6 +469,7 @@ user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.coverage.endpoint.base", "");
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
+user_pref("datareporting.usage.uploadEnabled", false);
 
 /** EXPERIMENTS ***/
 user_pref("app.shield.optoutstudies.enabled", false);
@@ -477,8 +510,12 @@ user_pref("browser.compactmode.show", true);
 user_pref("browser.display.focus_ring_on_anything", true);
 user_pref("browser.display.focus_ring_style", 0);
 user_pref("browser.display.focus_ring_width", 0);
-user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
+user_pref("browser.privateWindowSeparation.enabled", true); // WINDOWS
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true);
+
+/** TOOLBAR CUSTOMIZATION ***/
+user_pref("browser.toolbars.customizationUI.enabled", true);
+user_pref("browser.toolbars.customizationUI.legacy.enabled", true);
 
 /** COOKIE BANNER HANDLING ***/
 user_pref("cookiebanners.service.mode", 1);
@@ -486,51 +523,70 @@ user_pref("cookiebanners.service.mode.privateBrowsing", 1);
 user_pref("cookiebanners.service.mode.refresh", true);
 user_pref("cookiebanners.service.enableGlobalRules", true);
 
-/** SEARCH ENGINE ADJUSTMENTS ***/
-user_pref("browser.search.region", "AU");
-user_pref("browser.search.geoSpecificDefaults", true);
+/** FULLSCREEN NOTICE ***/
+user_pref("full-screen-api.transition-duration.enter", "0 0");
+user_pref("full-screen-api.transition-duration.leave", "0 0");
+user_pref("full-screen-api.warning.timeout", 0);
+user_pref("full-screen-api.warning.delay", -1);
+
+/** SEARCH ENGINE SETTINGS ***/
+user_pref("browser.search.region", "AU");   // Set your preferred search region
+user_pref("browser.search.regionUpdate.enabled", true);
+user_pref("browser.search.geoSpecificDefaults", true); // Use geo-specific search defaults
 user_pref("browser.search.defaultenginename", "Brave Search");
 user_pref("browser.search.aliases", "google:Google, bing:Bing, yahoo:Yahoo, duckduckgo:DuckDuckGo, ecosia:Ecosia, qwant:Qwant, brave:Brave Search");
 user_pref("browser.search.aliases.featureGate", true);
 user_pref("browser.search.aliases.refresh", true);
 user_pref("browser.search.aliases.enabled", true);
 
-/** FULLSCREEN NOTICE ***/
-user_pref("full-screen-api.transition-duration.enter", "0 0");
-user_pref("full-screen-api.transition-duration.leave", "0 0");
-user_pref("full-screen-api.warning.timeout", 0);
-user_pref("full-screen-api.warning.delay", 0);
-
 /** URL BAR ***/
+user_pref("browser.urlbar.suggest.calculator", true);
 user_pref("browser.urlbar.unitConversion.enabled", true);
+user_pref("browser.urlbar.suggest.quicksuggest", true);
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", true);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
+user_pref("browser.urlbar.suggest.quicksuggest.changes", true);
+user_pref("browser.urlbar.suggest.quicksuggest.changes.featureGate", true);
+user_pref("browser.urlbar.suggest.searches.featureGate", true);
+user_pref("browser.urlbar.suggest.quicksuggest.featureGate", true);
+user_pref("browser.urlbar.trending.featureGate", false);
 user_pref("browser.urlbar.trending.enabled", false);
-user_pref("dom.text_fragments.create_text_fragment.enabled", true);
 
 /** NEW TAB PAGE ***/
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
-user_pref("browser.newtabpage.activity-stream.showWeather", true);
-user_pref("browser.newtabpage.activity-stream.system.showWeather", true);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.system.showWeather", true);
+user_pref("browser.newtabpage.activity-stream.showWeather", true);
 
 /** POCKET ***/
-user_pref("extensions.pocket.enabled", false);
+user_pref("extensions.pocket.enabled", false); // Disable Pocket integration
 
 /** DOWNLOADS ***/
 user_pref("browser.download.useDownloadDir", false);
+user_pref("browser.download.folderList", 2); // Use a custom download directory
+user_pref("browser.download.always_ask_before_handling_new_types", true); // Always ask before handling new download types
+user_pref("browser.download.manager.showAlertOnComplete", true); // Disable alert on download completion
+user_pref("browser.download.manager.addToRecentDocs", false); // Disable adding downloads to recent documents
+user_pref("browser.download.manager.scanWhenDone", false);  // Disable scanning downloads
+user_pref("browser.download.alwaysOpenPanel", true);
+user_pref("browser.download.panel.shown", true); // Show the download panel
+user_pref("browser.download.panel.firstTime", false);
 
 /** PDF ***/
-user_pref("browser.download.open_pdf_attachments_inline", true);
-user_pref("pdfjs.disabled", false);
-user_pref("pdfjs.enableScripting", false);
+user_pref("browser.download.open_pdf_attachments_inline", true);    // Open PDFs in the browser
+user_pref("pdfjs.sidebarViewOnLoad", 2);
+user_pref("pdfjs.enableScripting", false); // Disable scripting in PDFs
 
 /** TAB BEHAVIOR ***/
+user_pref("browser.tabs.loadBookmarksInTabs", true);
+user_pref("browser.tabs.loadBookmarksInBackground", true);
+user_pref("browser.tabs.loadBookmarksInBackgroundOnClick", true);
 user_pref("browser.bookmarks.openInTabClosesMenu", false);
 user_pref("browser.menu.showViewImageInfo", true);
 user_pref("findbar.highlightAll", true);
 user_pref("layout.word_select.eat_space_to_next_word", false);
-user_pref("browser.tabs.closeWindowWithLastTab", false);
 
 /****************************************************************************
  * START: MY OVERRIDES                                                      *
@@ -539,40 +595,44 @@ user_pref("browser.tabs.closeWindowWithLastTab", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
 
+// Fill SVG Color
+user_pref("svg.context-properties.content.enabled", true);
 
+// Restore Compact Mode - 89 Above
+user_pref("browser.compactmode.show", true);
 
-/****************************************************************************
- * SECTION: SMOOTHFOX                                                       *
-****************************************************************************/
-user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
-user_pref("general.smoothScroll", true); // DEFAULT
-user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
-user_pref("general.smoothScroll.msdPhysics.enabled", true);
-user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
-user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
-user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
-user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
-user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
-user_pref("general.smoothScroll.currentVelocityWeighting", "1");
-user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
-user_pref("mousewheel.default.delta_multiplier_y", 300);
+// about:home Search Bar - 89 Above
+user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
 
-/****************************************************************************
- * SECTION: EXTRAS                                                       *
-****************************************************************************/
+// CSS's `:has()` selector #457 - 103 Above
+user_pref("layout.css.has-selector.enabled", true);
 
-user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
-user_pref("widget.use-xdg-desktop-portal.location", 1);
-user_pref("widget.use-xdg-desktop-portal.mime-handler", 1);
-user_pref("widget.use-xdg-desktop-portal.native-messaging", 1);
-user_pref("widget.use-xdg-desktop-portal.open-uri", 1);
-user_pref("widget.use-xdg-desktop-portal.settings", 1);
-user_pref("widget.use-xdg-desktop-portal.print", 1);
-user_pref("widget.use-xdg-desktop-portal.screensharing", 1);
-user_pref("widget.use-xdg-desktop-portal.screenshots", 1);
-user_pref("media.ffmpeg.enabled", true);
-user_pref("media.ffmpeg.encoder.enabled", true);
-user_pref("media.ffmpeg.vaapi.enabled", true);
+// ** Useful Options ***********************************************************
+// Tab preview
+// https://blog.nightly.mozilla.org/2024/02/06/a-preview-of-tab-previews-these-weeks-in-firefox-issue-153/
+user_pref("browser.tabs.hoverPreview.enabled", true);
+
+// Paste suggestion at urlbar
+// https://blog.nightly.mozilla.org/2023/12/04/url-gonna-want-to-check-this-out-these-weeks-in-firefox-issue-150/
+user_pref("browser.urlbar.clipboard.featureGate", true);
+
+// Integrated calculator at urlbar
+user_pref("browser.urlbar.suggest.calculator", true);
+
+// Integrated unit convertor at urlbar
+user_pref("browser.urlbar.unitConversion.enabled", true);
+
+// Searchbar, Removed from settings starting with FF v122
+user_pref("browser.search.widget.inNavBar",    true);
+
+// Firefox view search
+// https://blog.nightly.mozilla.org/2023/12/14/better-searching-in-firefox-to-close-out-2023-these-weeks-in-firefox-issue-151/
+user_pref("browser.firefox-view.search.enabled",       true);
+user_pref("browser.firefox-view.virtual-list.enabled", true);
+
+// Firefox screenshot
+// https://blog.nightly.mozilla.org/2024/01/22/happy-new-year-these-weeks-in-firefox-issue-152/
+user_pref("screenshots.browser.component.enabled", true);
 
 // Fill SVG Color
 user_pref("svg.context-properties.content.enabled", true);
@@ -592,40 +652,74 @@ user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
 // Who is bogus? (fixes Sidebery tab dragging on Linux)
 user_pref("widget.gtk.ignore-bogus-leave-notify", 1);
 
-// ** Theme Default Options ****************************************************
-// userchrome.css usercontent.css activate
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
+user_pref("widget.use-xdg-desktop-portal.location", 1);
+user_pref("widget.use-xdg-desktop-portal.mime-handler", 1);
+user_pref("widget.use-xdg-desktop-portal.native-messaging", 1);
+user_pref("widget.use-xdg-desktop-portal.open-uri", 1);
+user_pref("widget.use-xdg-desktop-portal.settings", 1);
+user_pref("widget.use-xdg-desktop-portal.print", 1);
+user_pref("widget.use-xdg-desktop-portal.screensharing", 1);
+user_pref("widget.use-xdg-desktop-portal.screenshots", 1);
+user_pref("media.ffmpeg.enabled", true);
+user_pref("media.ffmpeg.encoder.enabled", true);
+user_pref("media.ffmpeg.vaapi.enabled", true);
 
-// Fill SVG Color
 user_pref("svg.context-properties.content.enabled", true);
-
-// Restore Compact Mode - 89 Above
-user_pref("browser.compactmode.show", true);
-
-// about:home Search Bar - 89 Above
+user_pref("browser.tabs.delayHidingAudioPlayingIconMS", 0);
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
+user_pref("browser.tabs.allow_transparent_browser", true);
 
-// CSS's `:has()` selector #457 - 103 Above
+/*To active container tabs without any extension */
+user_pref("privacy.userContext.enabled", true);
+user_pref("privacy.userContext.ui.enabled", true);
+user_pref("privacy.userContext.longPressBehavior", 2);
+
+user_pref("widget.macos.titlebar-blend-mode.behind-window", true);
+
+/* extra required */
+user_pref("ultima.xstyle.highlight.aboutconfig", true);
+user_pref("browser.aboutConfig.showWarning", false);
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("devtools.debugger.remote-enabled", true);
+user_pref("devtools.chrome.enabled", true);
+user_pref("devtools.debugger.prompt-connection", false);
+user_pref("svg.context-properties.content.enabled", true);
 user_pref("layout.css.has-selector.enabled", true);
+user_pref("widget.gtk.ignore-bogus-leave-notify", 1);
+user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
+user_pref("widget.gtk.native-context-menus", false);
 
-// Tab preview
+/* extra recommended */
+user_pref("browser.tabs.groups.enabled", true);
 user_pref("browser.tabs.hoverPreview.enabled", true);
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.newtabShortcuts.refresh", false);
 
-// Paste suggestion at urlbar
-user_pref("browser.urlbar.clipboard.featureGate", true);
+/* extra accessibility */
+user_pref("findbar.highlightAll", true);
+user_pref("browser.tabs.insertAfterCurrent", true);
+user_pref("browser.search.context.loadInBackground", true);
+user_pref("browser.bookmarks.openInTabClosesMenu", false);
 
-// Integrated calculator at urlbar
-user_pref("browser.urlbar.suggest.calculator", true);
 
-// Integrated unit convertor at urlbar
-user_pref("browser.urlbar.unitConversion.enabled", true);
+/* extra privacy */
+user_pref("browser.send_pings", false); 
+user_pref("extensions.pocket.enabled", false);
 
-// Draw in Titlebar
-user_pref("browser.tabs.drawInTitlebar", true);
 
-// Firefox view search
-user_pref("browser.firefox-view.search.enabled",       true);
-user_pref("browser.firefox-view.virtual-list.enabled", true);
-
-// Firefox screenshot
-user_pref("screenshots.browser.component.enabled", true);
+/****************************************************************************
+ * SECTION: SMOOTHFOX                                                       *
+****************************************************************************/
+user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+user_pref("general.smoothScroll", true); // DEFAULT
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
+user_pref("general.smoothScroll.currentVelocityWeighting", "1");
+user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
+user_pref("mousewheel.default.delta_multiplier_y", 300);
