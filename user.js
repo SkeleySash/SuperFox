@@ -39,16 +39,16 @@ user_pref("userChrome.compatibility.navbar_top_border",    true);
 // user_pref("userChrome.compatibility.dynamic_separator",    true); // Need dynamic_separator
 
 // user_pref("userChrome.compatibility.os.windows_maximized", true);
-user_pref("userChrome.compatibility.os.win11",             true);
+// user_pref("userChrome.compatibility.os.win11",             true);
 
 // == Theme Custom Settings ====================================================
 // -- User Chrome --------------------------------------------------------------
 user_pref("userChrome.theme.private",                       true);
 // user_pref("userChrome.theme.proton_color.dark_blue_accent", true);
 // user_pref("userChrome.theme.monospace",                     true);
-// user_pref("userChrome.theme.transparent.frame",             true);
+user_pref("userChrome.theme.transparent.frame",             false);
 user_pref("userChrome.theme.transparent.menu",              true);
-// user_pref("userChrome.theme.transparent.panel",             true);
+user_pref("userChrome.theme.transparent.panel",             true);
 // user_pref("userChrome.theme.non_native_menu",               true); // only for linux
 
 // user_pref("userChrome.decoration.disable_panel_animate",    true);
@@ -97,7 +97,7 @@ user_pref("userChrome.combined.nav_button.home_button",     true);
 // user_pref("userChrome.combined.urlbar.home_button",         true);
 // user_pref("userChrome.combined.urlbar.reload_button",       true);
 // user_pref("userChrome.combined.sub_button.none_background", true);
-// user_pref("userChrome.combined.sub_button.as_normal",       true);
+user_pref("userChrome.combined.sub_button.as_normal",       false);
 
 // user_pref("userChrome.rounding.square_button",              true);
 // user_pref("userChrome.rounding.square_dialog",              true);
@@ -119,16 +119,16 @@ user_pref("userChrome.padding.drag_space",                  true);
 user_pref("userChrome.padding.toolbar_button.compact",      true);
 // user_pref("userChrome.padding.menu_compact",                true);
 // user_pref("userChrome.padding.bookmark_menu.compact",       true);
-// user_pref("userChrome.padding.urlView_expanding",           true);
-user_pref("userChrome.padding.urlView_result",              true);
+user_pref("userChrome.padding.urlView_expanding",           true);
+// user_pref("userChrome.padding.urlView_result",              true);
 user_pref("userChrome.padding.panel_header",                true);
 
 user_pref("userChrome.urlbar.iconbox_with_separator",       true);
 
-// user_pref("userChrome.urlView.as_commandbar",               true);
+user_pref("userChrome.urlView.as_commandbar",               false);
 user_pref("userChrome.urlView.full_width_padding",          true);
 user_pref("userChrome.urlView.always_show_page_actions",    true);
-user_pref("userChrome.urlView.move_icon_to_left",           true);
+user_pref("userChrome.urlView.move_icon_to_left",           false);
 user_pref("userChrome.urlView.go_button_when_typing",       true);
 user_pref("userChrome.urlView.focus_item_border",           true);
 
@@ -157,7 +157,7 @@ user_pref("userChrome.tabbar.one_liner.responsive",         true); // Need one_l
 // user_pref("userChrome.tab.close_button_at_pinned.background", true);
 // user_pref("userChrome.tab.close_button_at_hover.always",    true); // Need close_button_at_hover
 // user_pref("userChrome.tab.close_button_at_hover.with_selected", true);  // Need close_button_at_hover
-// user_pref("userChrome.tab.sound_show_label",                true); // Need remove sound_hide_label
+user_pref("userChrome.tab.sound_show_label",                true); // Need remove sound_hide_label
 user_pref("userChrome.tab.container.on_top",                true);
 // user_pref("userChrome.tab.container.always_long",           true);
 // user_pref("userChrome.tab.sound_with_favicons.on_center",   true);
@@ -200,7 +200,7 @@ user_pref("userChrome.compatibility.os",          true);
 user_pref("userChrome.theme.built_in_contrast",   true);
 user_pref("userChrome.theme.system_default",      true);
 user_pref("userChrome.theme.proton_color",        true);
-user_pref("userChrome.theme.proton_chrome",       true); // Need proton_color
+user_pref("userChrome.theme.proton_chrome",       false); // Need proton_color
 user_pref("userChrome.theme.fully_color",         true); // Need proton_color
 user_pref("userChrome.theme.fully_dark",          true); // Need proton_color
 
@@ -261,6 +261,60 @@ user_pref("userContent.page.illustration",     true);
 user_pref("userContent.page.proton_color",     true);
 user_pref("userContent.page.dark_mode",        true); // Need proton_color
 user_pref("userContent.page.proton",           true); // Need proton_color
+
+
+// CSS's `:has()` selector 
+user_pref("layout.css.has-selector.enabled", true);
+
+// Integrated calculator at urlbar
+user_pref("browser.urlbar.suggest.calculator", true);
+
+// Integrated unit convertor at urlbar
+user_pref("browser.urlbar.unitConversion.enabled", true);
+
+// GTK rounded corners
+user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
+
+// Who is bogus? (fixes Sidebery tab dragging on Linux)
+user_pref("widget.gtk.ignore-bogus-leave-notify", 1);
+
+/* Default rules */
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("svg.context-properties.content.enabled", true);
+user_pref("browser.tabs.delayHidingAudioPlayingIconMS", 0);
+user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
+
+/*To active container tabs without any extension */
+user_pref("privacy.userContext.enabled", true);
+user_pref("privacy.userContext.ui.enabled", true);
+user_pref("privacy.userContext.longPressBehavior", 2);
+
+// Restore Compact Mode - 89 Above
+user_pref("browser.compactmode.show", true);
+
+// about:home Search Bar - 89 Above
+user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
+
+// ** Useful Options ***********************************************************
+// Tab preview
+// https://blog.nightly.mozilla.org/2024/02/06/a-preview-of-tab-previews-these-weeks-in-firefox-issue-153/
+user_pref("browser.tabs.hoverPreview.enabled", true);
+
+// Paste suggestion at urlbar
+// https://blog.nightly.mozilla.org/2023/12/04/url-gonna-want-to-check-this-out-these-weeks-in-firefox-issue-150/
+user_pref("browser.urlbar.clipboard.featureGate", true);
+
+// Draw in Titlebar
+user_pref("browser.tabs.drawInTitlebar", true);
+
+// Firefox view search
+// https://blog.nightly.mozilla.org/2023/12/14/better-searching-in-firefox-to-close-out-2023-these-weeks-in-firefox-issue-151/
+user_pref("browser.firefox-view.search.enabled",       true);
+user_pref("browser.firefox-view.virtual-list.enabled", true);
+
+// Firefox screenshot
+// https://blog.nightly.mozilla.org/2024/01/22/happy-new-year-these-weeks-in-firefox-issue-152/
+user_pref("screenshots.browser.component.enabled", true);
 
 /****************************************************************************
  * SECTION: FASTFOX                                                         *
@@ -365,6 +419,7 @@ user_pref("security.OCSP.enabled", 0);
 user_pref("security.remote_settings.crlite_filters.enabled", true);
 user_pref("security.pki.crlite_mode", 2);
 user_pref("security.cert_pinning.enforcement_level", 2);
+user_pref("security.csp.reporting.enabled", false);
 
 /** SSL / TLS ***/
 user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
@@ -513,6 +568,10 @@ user_pref("browser.display.focus_ring_width", 0);
 user_pref("browser.privateWindowSeparation.enabled", true); // WINDOWS
 user_pref("browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled", true);
 
+/** AI ***/
+user_pref("browser.ml.enable", false);
+user_pref("browser.ml.chat.enabled", false);
+
 /** TOOLBAR CUSTOMIZATION ***/
 user_pref("browser.toolbars.customizationUI.enabled", true);
 user_pref("browser.toolbars.customizationUI.legacy.enabled", true);
@@ -580,9 +639,9 @@ user_pref("pdfjs.sidebarViewOnLoad", 2);
 user_pref("pdfjs.enableScripting", false); // Disable scripting in PDFs
 
 /** TAB BEHAVIOR ***/
-user_pref("browser.tabs.loadBookmarksInTabs", true);
-user_pref("browser.tabs.loadBookmarksInBackground", true);
-user_pref("browser.tabs.loadBookmarksInBackgroundOnClick", true);
+user_pref("browser.tabs.loadBookmarksInTabs", false);
+user_pref("browser.tabs.loadBookmarksInBackground", false);
+user_pref("browser.tabs.loadBookmarksInBackgroundOnClick", false);
 user_pref("browser.bookmarks.openInTabClosesMenu", false);
 user_pref("browser.menu.showViewImageInfo", true);
 user_pref("findbar.highlightAll", true);
@@ -594,63 +653,6 @@ user_pref("layout.word_select.eat_space_to_next_word", false);
 // visit https://github.com/yokoffing/Betterfox/wiki/Common-Overrides
 // visit https://github.com/yokoffing/Betterfox/wiki/Optional-Hardening
 // Enter your personal overrides below this line:
-
-// Fill SVG Color
-user_pref("svg.context-properties.content.enabled", true);
-
-// Restore Compact Mode - 89 Above
-user_pref("browser.compactmode.show", true);
-
-// about:home Search Bar - 89 Above
-user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
-
-// CSS's `:has()` selector #457 - 103 Above
-user_pref("layout.css.has-selector.enabled", true);
-
-// ** Useful Options ***********************************************************
-// Tab preview
-// https://blog.nightly.mozilla.org/2024/02/06/a-preview-of-tab-previews-these-weeks-in-firefox-issue-153/
-user_pref("browser.tabs.hoverPreview.enabled", true);
-
-// Paste suggestion at urlbar
-// https://blog.nightly.mozilla.org/2023/12/04/url-gonna-want-to-check-this-out-these-weeks-in-firefox-issue-150/
-user_pref("browser.urlbar.clipboard.featureGate", true);
-
-// Integrated calculator at urlbar
-user_pref("browser.urlbar.suggest.calculator", true);
-
-// Integrated unit convertor at urlbar
-user_pref("browser.urlbar.unitConversion.enabled", true);
-
-// Searchbar, Removed from settings starting with FF v122
-user_pref("browser.search.widget.inNavBar",    true);
-
-// Firefox view search
-// https://blog.nightly.mozilla.org/2023/12/14/better-searching-in-firefox-to-close-out-2023-these-weeks-in-firefox-issue-151/
-user_pref("browser.firefox-view.search.enabled",       true);
-user_pref("browser.firefox-view.virtual-list.enabled", true);
-
-// Firefox screenshot
-// https://blog.nightly.mozilla.org/2024/01/22/happy-new-year-these-weeks-in-firefox-issue-152/
-user_pref("screenshots.browser.component.enabled", true);
-
-// Fill SVG Color
-user_pref("svg.context-properties.content.enabled", true);
-
-// CSS's `:has()` selector 
-user_pref("layout.css.has-selector.enabled", true);
-
-// Integrated calculator at urlbar
-user_pref("browser.urlbar.suggest.calculator", true);
-
-// Integrated unit convertor at urlbar
-user_pref("browser.urlbar.unitConversion.enabled", true);
-
-// GTK rounded corners
-user_pref("widget.gtk.rounded-bottom-corners.enabled", true);
-
-// Who is bogus? (fixes Sidebery tab dragging on Linux)
-user_pref("widget.gtk.ignore-bogus-leave-notify", 1);
 
 user_pref("widget.use-xdg-desktop-portal.file-picker", 1);
 user_pref("widget.use-xdg-desktop-portal.location", 1);
@@ -674,7 +676,6 @@ user_pref("browser.tabs.allow_transparent_browser", true);
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
 user_pref("privacy.userContext.longPressBehavior", 2);
-
 user_pref("widget.macos.titlebar-blend-mode.behind-window", true);
 
 /* extra required */
@@ -702,11 +703,9 @@ user_pref("browser.tabs.insertAfterCurrent", true);
 user_pref("browser.search.context.loadInBackground", true);
 user_pref("browser.bookmarks.openInTabClosesMenu", false);
 
-
 /* extra privacy */
 user_pref("browser.send_pings", false); 
 user_pref("extensions.pocket.enabled", false);
-
 
 /****************************************************************************
  * SECTION: SMOOTHFOX                                                       *
